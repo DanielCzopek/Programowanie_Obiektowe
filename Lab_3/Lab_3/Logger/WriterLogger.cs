@@ -12,7 +12,10 @@ namespace Lab_3.Logger
 
         public virtual void Log(params string[] messages)
         {
-            // Uzupełnić to miejsce o logikę zapisu opartą o TextWriter ...
+            for (int i = 0; i < messages.Length; i++)
+            {
+                this.writer.Write(time + ": " + messages[i] + "\n");
+            }
         }
 
         public abstract void Dispose();
