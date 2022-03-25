@@ -13,3 +13,11 @@ D:\Users\daniel.czopek\source\repos\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.dll
 D:\Users\daniel.czopek\source\repos\Lab_3\Lab_3\obj\Debug\net5.0\ref\Lab_3.dll
 D:\Users\daniel.czopek\source\repos\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.pdb
 D:\Users\daniel.czopek\source\repos\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.genruntimeconfig.cache
+D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.csproj.AssemblyReference.cache
+D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.AssemblyInfoInputs.cache
+D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.AssemblyInfo.cs
+D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.csproj.CoreCompileInputs.cache
+D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.dll
+D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\ref\Lab_3.dll
+D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.pdb

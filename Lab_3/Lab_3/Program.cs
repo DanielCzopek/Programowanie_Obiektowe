@@ -1,19 +1,23 @@
 ﻿using System;
+using Lab_3.Logger;
 
 namespace Lab_3
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            string a = "text-123";
-            Print(a + "1");
-            Print("2");
-            Print("3");
-        }
-        public static void Print(string text)
-        {
-            Console.WriteLine("print: " + text);
+            string host = "google.com";
+            int port = 80;
+            using (ClientSocket clientSocket = new ClientSocket(host, port))
+            {
+                // request:
+                string requestText = "Message to sent ...";
+                byte[] requestBytes = Encoding.UTF8.GetBytes(requestText);
+                clientSocket.Send(requestBytes);
+
+                clientSocket.Close();
+            }
         }
     }
 }
