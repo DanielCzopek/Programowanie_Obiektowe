@@ -21,3 +21,11 @@ D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\L
 D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.dll
 D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\ref\Lab_3.dll
 D:\Users\daniel.czopek\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.pdb
+C:\Users\Asus\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.dll
+C:\Users\Asus\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\ref\Lab_3.dll
+C:\Users\Asus\Source\Repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.pdb
+C:\Users\Asus\source\repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.AssemblyInfo.cs
+C:\Users\Asus\source\repos\DanielCzopek\Programowanie_obiektowe\Lab_3\Lab_3\obj\Debug\net5.0\Lab_3.csproj.CoreCompileInputs.cache
