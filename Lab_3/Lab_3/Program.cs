@@ -1,4 +1,4 @@
-﻿using Syem;
+﻿using System;
 using Lab_3.Logger;
 
 namespace Lab_3

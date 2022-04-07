@@ -68,7 +68,7 @@ namespace Lab_2
     {
         public static List<string> Lista(string taskName, string taskStatus)
         {
-            List<string> Task = new List<string> {};
+            List<string> Task = new List<string> { };
         }
 
         protected String group { get; set; }
