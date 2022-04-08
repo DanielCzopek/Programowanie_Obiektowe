@@ -1,0 +1,30 @@
+PROJEKT PROGRAMOWANIE OBIEKTOWE
+
+Temat projektu: Wypożyczalnia filmów
+Wizualna warstwa:
+  1.	Lista filmów do wypożyczenia
+    a.	Tytuł filmu
+    b.	Zdjęcie / plakat etc.
+    c.	Cena za seans
+  2.	Opis filmu
+    a.	Rok produkcji
+    b.	Aktorzy
+    c.	Streszczenie
+    d.	Ocena / opinie ?
+    e.	Gatunek
+  3.	Kasa
+    a.	Forma płatności
+    b.	Dane klienta – albo zaloguj się do systemu  
+    c.	Etap  końcowy – potwierdzenie zakupu może wysłanie potwierdzenia na email
+  4.	Logowanie
+    a.	Mail
+    b.	Dane osobowe	
+Techniczna warstwa:
+  1.	Baza danych
+    a.	Tabela filmy
+    b.	Tabela opis filmu?
+    c.	Tabela zamówienia
+    d.	Tabela klienci – dla systemu logowania
+    e.	Tabela opinie – dla systemu oceniania
+	
+
