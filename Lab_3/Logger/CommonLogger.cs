@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Lab_3.Logger
 {
     class CommonLogger : ILogger
     {
-        private readonly ILogger[] loggers;       
+        private readonly ILogger[] loggers;
         public void Dispose()
         {
             GC.SuppressFinalize(this);
@@ -29,4 +30,3 @@ namespace Lab_3.Logger
         }
     }
 }
-

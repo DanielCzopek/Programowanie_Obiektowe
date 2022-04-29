@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace Lab_3.Logger
             this.clientSocket = new ClientSocket(host, port);
         }
 
-       ~SocketLogger()
+        ~SocketLogger()
         {
             this.clientSocket.Dispose();
         }
@@ -28,10 +29,10 @@ namespace Lab_3.Logger
         {
             string time = DateTime.Now.ToString("yyyy-MM-ddTHH:MM:sszzz");
             //TODO - dostosować forma wysłanej wiadomości
-            
+
             for (int i = 0; i < messages.Length; i++)
             {
-                string requestText = time +": " + messages[i] +"\n";
+                string requestText = time + ": " + messages[i] + "\n";
                 byte[] requestBytes = Encoding.UTF8.GetBytes(requestText);
 
                 this.clientSocket.Send(requestBytes);
