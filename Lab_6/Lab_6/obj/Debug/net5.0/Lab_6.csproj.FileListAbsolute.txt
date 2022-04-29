@@ -1,0 +1,17 @@
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\bin\Debug\net5.0\Lab_6.exe
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\bin\Debug\net5.0\Lab_6.deps.json
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\bin\Debug\net5.0\Lab_6.runtimeconfig.json
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\bin\Debug\net5.0\Lab_6.runtimeconfig.dev.json
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\bin\Debug\net5.0\Lab_6.dll
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\bin\Debug\net5.0\ref\Lab_6.dll
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\bin\Debug\net5.0\Lab_6.pdb
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\obj\Debug\net5.0\Lab_6.csproj.AssemblyReference.cache
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\obj\Debug\net5.0\Lab_6.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\obj\Debug\net5.0\Lab_6.AssemblyInfoInputs.cache
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\obj\Debug\net5.0\Lab_6.AssemblyInfo.cs
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\obj\Debug\net5.0\Lab_6.csproj.CoreCompileInputs.cache
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\obj\Debug\net5.0\Lab_6.dll
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\obj\Debug\net5.0\ref\Lab_6.dll
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\obj\Debug\net5.0\Lab_6.pdb
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\obj\Debug\net5.0\Lab_6.genruntimeconfig.cache
+D:\Users\daniel.Czopek\source\repos\Lab_6\Lab_6\bin\Debug\net5.0\Newtonsoft.Json.dll
