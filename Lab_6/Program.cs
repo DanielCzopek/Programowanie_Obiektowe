@@ -16,17 +16,17 @@ namespace Lab_6
                 new User {Name = "C", Role = "Teacher", Marks = null},
                 new User {Name = "D", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5, 4, 3, 3} },
                 new User {Name = "F", Role = "Admin", Marks = null},
-                new User {Name = "E", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5, 4, 3, 3} },
-                new User {Name = "W", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5, 4, 3, 3} },
+                new User {Name = "E", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5,  3} },
+                new User {Name = "W", Role = "Student", Marks = new int[] {1, 5, 4, 3, 3} },
                 new User {Name = "C", Role = "Mod", Marks = null },
-                new User {Name = "F", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5, 4, 3, 3} },
+                new User {Name = "F", Role = "Student", Marks = new int[] {1, 2, 3, 4, 5, 5, 4, 3, 3} },
                 new User {Name = "G", Role = "Teacher", Marks = null },
-                new User {Name = "A", Role = "Student", Marks = new int[] {4, 2, 5, 4, 4, 5, 5, 4, 3, 4} },
+                new User {Name = "A", Role = "Student", Marks = new int[] {4, 4, 4, 5, 5, 4, 3, 4} },
                 new User {Name = "C", Role = "Student", Marks = new int[] {5, 5, 3, 5, 4, 5, 5, 4, 3, 2} },
-                new User {Name = "F", Role = "Student", Marks = new int[] {3, 2, 3, 4, 3, 5, 1, 4, 5, 3} },
-                new User {Name = "P", Role = "Student", Marks = new int[] {1, 2, 3, 2, 1, 5, 1, 4, 3, 4} },
-                new User {Name = "O", Role = "Student", Marks = new int[] {1, 3, 3, 4, 4, 5, 5, 4, 5, 3} },
-                new User {Name = "Z", Role = "Student", Marks = new int[] {2, 2, 3, 5, 4, 5, 5, 4, 3, 3} },
+                new User {Name = "F", Role = "Student", Marks = new int[] {3, 2, 3, 4, 3, 5, 1, 4, 3} },
+                new User {Name = "P", Role = "Student", Marks = new int[] { } },
+                new User {Name = "O", Role = "Student", Marks = new int[] {4, 5, 5, 4, 5, 3} },
+                new User {Name = "Z", Role = "Student", Marks = new int[] {2, 2, 3, 5, 5, 3, 3} },
 
             };
             // 1. Ilość rekordów w tablicy
@@ -87,13 +87,23 @@ namespace Lab_6
             //    }
             //}
 
-            // 6. Ilość rekordów, dla których podano oceny( nie null i więcej niż 0
-            Console.WriteLine(users.Count(user => user.Marks is not null &&
-           users.Count(user => user.Marks) > 0);
+            // 6. Ilość rekordów, dla których podano oceny ( nie null i więcej niż 0 )
+           //  Console.WriteLine((users.Count(user => user.Marks is not null)));
 
+            // TODO: Zrobić tak by działało też dla > 0
 
+            // 7. Suma, ilość i średnia wszystkich ocen studentów
+
+            int[] suma_ocen = users.Zip((user => user.Marks.GetValue()).ToList();
+
+            foreach (var suma in suma_ocen)
+            {
+                Console.WriteLine(suma);
+            }
 
         }
+
+            
     }
 
 
