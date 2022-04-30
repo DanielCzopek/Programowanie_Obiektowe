@@ -29,9 +29,17 @@ namespace Lab_6
                 new User {Name = "Z", Role = "Student", Marks = new int[] {2, 2, 3, 5, 5, 3, 3} },
 
             };
+
+            ///////////////////////////////////////////////////////////////////////
+            ///
+
             // 1. Ilość rekordów w tablicy
             //Console.WriteLine(users.Count);
             //Console.WriteLine((from user in users select user).Count());
+
+            /////////////////////////////////////////////////////////////////////
+            ///
+
             // 2. Lista nazw użytkowników
             List<string> names_1 = users.Select(user => user.Name).ToList();
             List<string> names_2 = (from user in users select user.Name).ToList();
@@ -40,6 +48,9 @@ namespace Lab_6
             //    Console.WriteLine(name);
             //foreach (string name in names_2)
             //    Console.WriteLine(name);
+
+            ////////////////////////////////////////////////////////////////////
+            ///
 
             // 3.  Sortowanie użytkowników po nazwach
             List<User> users_1 = users.OrderBy(user => user.Name).ToList();
@@ -50,6 +61,9 @@ namespace Lab_6
             //foreach(User user in users_2)
             //    Console.WriteLine(user.Name);
 
+            ///////////////////////////////////////////////////////////////////
+            ///
+
             // 4.Lista dostępnych ról użytkowników
 
             List<string> rules_1 = users.Select(user => user.Role).Distinct().ToList();
@@ -59,6 +73,9 @@ namespace Lab_6
             //    Console.WriteLine(rule);
             //foreach (string rule in rules_2)
             //    Console.WriteLine(rule);
+
+            ////////////////////////////////////////////////////////////
+            ///
 
             // 5. Lista pogrupowanych użytkowników po rolach
 
@@ -87,38 +104,62 @@ namespace Lab_6
             //    }
             //}
 
+            ////////////////////////////////////////////////////////////////////////////////
+            ///
+
             // 6. Ilość rekordów, dla których podano oceny ( nie null i więcej niż 0 )
-           //  Console.WriteLine((users.Count(user => user.Marks is not null)));
+
+            //  Console.WriteLine((users.Count(user => user.Marks is not null)));
+
+            //var oceny_2 = (from user in users where user.Marks is not null select user.Marks).Count();
+
+            //Console.WriteLine(oceny_2);
 
             // TODO: Zrobić tak by działało też dla > 0
 
+            /////////////////////////////////////////////////////////////////////////////////////
+            ///
+
+
             // 7. Suma, ilość i średnia wszystkich ocen studentów
 
-            int[] suma_ocen = users.Zip((user => user.Marks.GetValue()).ToList();
+            // var suma_ocen = users.Mark.ToArray();
 
-            foreach (var suma in suma_ocen)
-            {
-                Console.WriteLine(suma);
-            }
+            //Console.WriteLine(suma_ocen);
+
+            var Suma_ocen_2 = from user in users select user.Marks.Sum();
+
+            //Console.WriteLine(Suma_ocen_2);
+
+            //TODO: Nie działą
+
+            /////////////////////////////////////////////////////////////////////////////
+            ///
+
+            // 8. Najlepsza ocena
+
+            //  var Najlepsza_ocena_1 = users.GroupJoin(user => user.Marks, user => user.Name);
+
+            var Najlepsza_ocena_2 = (from user in users select user.Marks).Max();
+
+            //TODO: Naprawić nie działa
+
+            // Console.WriteLine(Najlepsza_ocena_2);
 
         }
 
             
     }
 
-
     public class User
     {
         public string Name { get; set; }
         public string Role { get; set; } // ADMIN, MODERATOR, TEACHER, STUDENT
         public int Age { get; set; }
-        public int[] Marks { get; set; } // zawsze null gdy ADMIN, MODERATOR lub TEACHER
+        public int[]? Marks { get; set; } // zawsze null gdy ADMIN, MODERATOR lub TEACHER
         public DateTime? CreatedAt { get; set; }
         public DateTime? RemovedAt { get; set; }
     }
-    //   public IComparer <User>  
-
-
 }
 
 
