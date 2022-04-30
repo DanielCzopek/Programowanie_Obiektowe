@@ -12,16 +12,16 @@ namespace Lab_6
         {
             List<User> users = new List<User>()
             {
-                new User {Name = "A", Role = "Teacher", },
-                new User { Name = "B", Role = "Mod", },
-                new User {Name = "C", Role = "Teacher",},
+                new User {Name = "A", Role = "Teacher",Marks = null },
+                new User { Name = "B", Role = "Mod", Marks = null },
+                new User {Name = "C", Role = "Teacher", Marks = null},
                 new User {Name = "D", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5, 4, 3, 3} },
-                new User {Name = "F", Role = "Admin",},
-                new User {Name = "E", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5,  3} },
+                new User {Name = "F", Role = "Admin", Marks = null},
+                new User {Name = "E", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5, 3} },
                 new User {Name = "W", Role = "Student", Marks = new int[] {1, 5, 4, 3, 3} },
-                new User {Name = "C", Role = "Mod", },
+                new User {Name = "C", Role = "Mod", Marks = null},
                 new User {Name = "F", Role = "Student", Marks = new int[] {1, 2, 3, 4, 5, 5, 4, 3, 3} },
-                new User {Name = "G", Role = "Teacher", },
+                new User {Name = "G", Role = "Teacher", Marks = null},
                 new User {Name = "A", Role = "Student", Marks = new int[] {4, 4, 4, 5, 5, 4, 3, 4} },
                 new User {Name = "C", Role = "Student", Marks = new int[] {5, 5, 3, 5, 4, 5, 5, 4, 3, 2} },
                 new User {Name = "F", Role = "Student", Marks = new int[] {3, 2, 3, 4, 3, 5, 1, 4, 3} },
@@ -125,10 +125,11 @@ namespace Lab_6
 
             // 7. Suma, ilość i średnia wszystkich ocen studentów
 
-            
 
-            // Expression<Func<user.Marks, bool>> whereClauseDynamicSomeTable = t => true;
-            // takie coś w sieci znalazłem może zadziała
+            // int[] summed = users.Sum
+
+            // Expression<Func<bool>> whereClauseDynamicSomeTable = t => true;
+            //// takie coś w sieci znalazłem może zadziała
 
 
             // int[] summed = users.Sum(user => user.Marks);
@@ -152,7 +153,7 @@ namespace Lab_6
 
 
 
-            // int Najlepsza_ocena_2 = from user in users select user.Marks..Max();
+            //  int Najlepsza_ocena_2 = from user in users select user.Marks.Max();
 
             //TODO: Naprawić nie działa
 
@@ -160,9 +161,6 @@ namespace Lab_6
 
             // 9. Najgorsza ocena 
 
-            int Worst_Mark =
-    (from user in users select A
-            Console.WriteLine(Worst_Mark);
 
             // 10. Najlepszego studenta
 
