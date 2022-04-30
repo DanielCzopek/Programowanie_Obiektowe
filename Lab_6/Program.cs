@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Lab_6
 {
@@ -11,16 +12,16 @@ namespace Lab_6
         {
             List<User> users = new List<User>()
             {
-                new User {Name = "A", Role = "Teacher", Marks = null },
-                new User { Name = "B", Role = "Mod", Marks = null },
-                new User {Name = "C", Role = "Teacher", Marks = null},
+                new User {Name = "A", Role = "Teacher", },
+                new User { Name = "B", Role = "Mod", },
+                new User {Name = "C", Role = "Teacher",},
                 new User {Name = "D", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5, 4, 3, 3} },
-                new User {Name = "F", Role = "Admin", Marks = null},
+                new User {Name = "F", Role = "Admin",},
                 new User {Name = "E", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5,  3} },
                 new User {Name = "W", Role = "Student", Marks = new int[] {1, 5, 4, 3, 3} },
-                new User {Name = "C", Role = "Mod", Marks = null },
+                new User {Name = "C", Role = "Mod", },
                 new User {Name = "F", Role = "Student", Marks = new int[] {1, 2, 3, 4, 5, 5, 4, 3, 3} },
-                new User {Name = "G", Role = "Teacher", Marks = null },
+                new User {Name = "G", Role = "Teacher", },
                 new User {Name = "A", Role = "Student", Marks = new int[] {4, 4, 4, 5, 5, 4, 3, 4} },
                 new User {Name = "C", Role = "Student", Marks = new int[] {5, 5, 3, 5, 4, 5, 5, 4, 3, 2} },
                 new User {Name = "F", Role = "Student", Marks = new int[] {3, 2, 3, 4, 3, 5, 1, 4, 3} },
@@ -109,10 +110,11 @@ namespace Lab_6
 
             // 6. Ilość rekordów, dla których podano oceny ( nie null i więcej niż 0 )
 
-            //  Console.WriteLine((users.Count(user => user.Marks is not null)));
+            var oceny_1 = (users.Count(user => user.Marks is not null));
 
-            //var oceny_2 = (from user in users where user.Marks is not null select user.Marks).Count();
+            var oceny_2 = (from user in users where user.Marks is not null select user.Marks).Count();
 
+            //Console.WriteLine(oceny_1);
             //Console.WriteLine(oceny_2);
 
             // TODO: Zrobić tak by działało też dla > 0
@@ -123,28 +125,70 @@ namespace Lab_6
 
             // 7. Suma, ilość i średnia wszystkich ocen studentów
 
-            // var suma_ocen = users.Mark.ToArray();
+            
+
+            // Expression<Func<user.Marks, bool>> whereClauseDynamicSomeTable = t => true;
+            // takie coś w sieci znalazłem może zadziała
+
+
+            // int[] summed = users.Sum(user => user.Marks);
+
+            //  var sum = (users.CopyTo(user => user.Marks is not null);
+
+
 
             //Console.WriteLine(suma_ocen);
 
-            var Suma_ocen_2 = from user in users select user.Marks.Sum();
 
-            //Console.WriteLine(Suma_ocen_2);
 
-            //TODO: Nie działą
+            // Console.WriteLine(Suma_ocen_2);
+
+            //TODO: Nie działa
 
             /////////////////////////////////////////////////////////////////////////////
             ///
 
             // 8. Najlepsza ocena
 
-            //  var Najlepsza_ocena_1 = users.GroupJoin(user => user.Marks, user => user.Name);
 
-            var Najlepsza_ocena_2 = (from user in users select user.Marks).Max();
+
+            // int Najlepsza_ocena_2 = from user in users select user.Marks..Max();
 
             //TODO: Naprawić nie działa
 
-            // Console.WriteLine(Najlepsza_ocena_2);
+            //Console.WriteLine(Najlepsza_ocena_2);
+
+            // 9. Najgorsza ocena 
+
+            int Worst_Mark =
+    (from user in users select A
+            Console.WriteLine(Worst_Mark);
+
+            // 10. Najlepszego studenta
+
+            // 11.Lista studentów, którzy posiadają najmniej ocen
+
+            // List<string> students_marks_1 = user => user.Marks
+
+            // var count = users.Count(user => user.Marks);
+
+            //  List<string> students_min_Marks = (count user.Marks from user in users where user.Marks ).Count().ToString().ToList();
+
+
+
+            // 12. Lista studentów, którzy posiadają najwięcej ocen
+
+            // 13. Lista obiektów zawierających tylko nazwę i średnią ocenę(mapowanie na inny obiekt)
+
+            // 14. Studentów posortowanych od najlepszego
+
+            // 15. Średnią ocenę wszystkich studentów
+
+            // 16. Listę użytkowników pogrupowanych po miesiącach daty utworzenia(np. 2022 - 02, 2022 - 03, 2022 - 04, itp.)
+
+            // 17. Listę użytkowników, którzy nie zostali usunięci(data usunięcia nie została ustawiona)
+
+            // 18. Najnowszego studenta(najnowsza data utworzenia)
 
         }
 
@@ -156,7 +200,7 @@ namespace Lab_6
         public string Name { get; set; }
         public string Role { get; set; } // ADMIN, MODERATOR, TEACHER, STUDENT
         public int Age { get; set; }
-        public int[]? Marks { get; set; } // zawsze null gdy ADMIN, MODERATOR lub TEACHER
+        public int[] Marks { get; set; } // zawsze null gdy ADMIN, MODERATOR lub TEACHER
         public DateTime? CreatedAt { get; set; }
         public DateTime? RemovedAt { get; set; }
     }
