@@ -127,13 +127,13 @@ namespace Lab_6
             // 7. Suma, ilość i średnia wszystkich ocen studentów
 
             // var zip = users.Zip((user => user.Marks), (a, b) => (a + b);
+            //int summed = 0;
+            //for (int i = 0; i < users.Count; i++)
+            //{
+            //    summed += users.Marks;
+            //}
 
-            for (int i = 0; i < users.Count; i++)
-            {
-                int summed =+ users.Select(user => user.Marks).ToArray();
-            }
-
-            Console.WriteLine(summed);
+            //Console.WriteLine(summed);
           // var zipped = users.Zip(from user in users select user.Marks).ToArray();
 
             // Console.WriteLine(zipped);
