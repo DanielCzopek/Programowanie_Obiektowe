@@ -29,6 +29,7 @@ namespace Lab_6
                 new User {Name = "O", Role = "Student", Marks = new int[] {4, 5, 5, 4, 5, 3} },
                 new User {Name = "Z", Role = "Student", Marks = new int[] {2, 2, 3, 5, 5, 3, 3} },
 
+
             };
 
             ///////////////////////////////////////////////////////////////////////
@@ -114,7 +115,7 @@ namespace Lab_6
 
             var oceny_2 = (from user in users where user.Marks is not null select user.Marks).Count();
 
-            //Console.WriteLine(oceny_1);
+            // Console.WriteLine(oceny_1);
             //Console.WriteLine(oceny_2);
 
             // TODO: Zrobić tak by działało też dla > 0
@@ -125,8 +126,30 @@ namespace Lab_6
 
             // 7. Suma, ilość i średnia wszystkich ocen studentów
 
+            // var zip = users.Zip((user => user.Marks), (a, b) => (a + b);
 
-            // int[] summed = users.Sum
+            for (int i = 0; i < users.Count; i++)
+            {
+                int summed =+ users.Select(user => user.Marks).ToArray();
+            }
+
+            Console.WriteLine(summed);
+          // var zipped = users.Zip(from user in users select user.Marks).ToArray();
+
+            // Console.WriteLine(zipped);
+            //foreach (var value in zip)
+            //{
+            //    Console.WriteLine(value);
+            //}
+
+            //Array Summed = Array.Copy(user => user.Marks, users.Capacity, );
+
+            //Array Summed = Array.CreateInstance(typeof(System.Int32), 5);
+            //for (int i = Summed.GetLowerBound(0); i <= Summed.GetUpperBound(0); i++)
+            //    Summed.SetValue(i + 1, i);
+
+            //Console.WriteLine(Summed);
+
 
             // Expression<Func<bool>> whereClauseDynamicSomeTable = t => true;
             //// takie coś w sieci znalazłem może zadziała
@@ -134,7 +157,7 @@ namespace Lab_6
 
             // int[] summed = users.Sum(user => user.Marks);
 
-            //  var sum = (users.CopyTo(user => user.Marks is not null);
+            // var sum = (users.CopyTo(user => user.Marks is not null);
 
 
 
@@ -153,7 +176,7 @@ namespace Lab_6
 
 
 
-            //  int Najlepsza_ocena_2 = from user in users select user.Marks.Max();
+            // int Najlepsza_ocena_2 = from user in users select user.Marks.Max();
 
             //TODO: Naprawić nie działa
 
@@ -190,7 +213,7 @@ namespace Lab_6
 
         }
 
-            
+
     }
 
     public class User
@@ -198,7 +221,7 @@ namespace Lab_6
         public string Name { get; set; }
         public string Role { get; set; } // ADMIN, MODERATOR, TEACHER, STUDENT
         public int Age { get; set; }
-        public int[] Marks { get; set; } // zawsze null gdy ADMIN, MODERATOR lub TEACHER
+        public int[]? Marks { get; set; } // zawsze null gdy ADMIN, MODERATOR lub TEACHER
         public DateTime? CreatedAt { get; set; }
         public DateTime? RemovedAt { get; set; }
     }
