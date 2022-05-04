@@ -21,7 +21,7 @@ namespace Lab_6
                 new User {Name = "A", Role = "Student", Marks = new [] {4, 4, 4, 5, 5, 4, 3, 4} },
                 new User {Name = "C", Role = "Student", Marks = new [] {5, 5, 3, 5, 4, 5, 5, 4, 3, 2} },
                 new User {Name = "F", Role = "Student", Marks = new [] {3, 2, 3, 4, 3, 5, 1, 4, 3} },
-                new User {Name = "P", Role = "Student", Marks = new [] {1 }, },
+                new User {Name = "P", Role = "Student", Marks = new [] { 1 }, },
                 new User {Name = "O", Role = "Student", Marks = new [] {4, 5, 5, 4, 5, 3} },
                 new User {Name = "Z", Role = "Student", Marks = new [] {2, 2, 3, 5, 5, 3, 3} },
 
@@ -33,8 +33,8 @@ namespace Lab_6
 
             // 1. Ilość rekordów w tablicy
 
-            Console.WriteLine(users.Count);
-            Console.WriteLine((from user in users select user).Count());
+            //Console.WriteLine(users.Count);
+            //Console.WriteLine((from user in users select user).Count());
 
             /////////////////////////////////////////////////////////////////////
             ///
@@ -109,79 +109,57 @@ namespace Lab_6
 
             // 6. Ilość rekordów, dla których podano oceny ( nie null i więcej niż 0 )
 
-            var oceny_1 = (users.Count(user => user.Marks is not null and user.Marks.Length > 0));
+            var Marks_1 = (users.Count(user => user.Marks is not null
+            && user.Marks.Length > 0));
 
-            var oceny_2 = (from user in users where user.Marks is not null and  select user.Marks.Length > 0).Count();
+            var Marks_2 = (from user in users where user.Marks is not null
+                           && user.Marks.Length > 0 select user.Marks).Count();
 
-            // Console.WriteLine(oceny_1);
-            //Console.WriteLine(oceny_2);
-
-            // TODO: Zrobić tak by działało też dla > 0
+            //Console.WriteLine(Marks_1);
+            //Console.WriteLine(Marks_2);
 
             /////////////////////////////////////////////////////////////////////////////////////
             ///
 
-
             // 7. Suma, ilość i średnia wszystkich ocen studentów
 
-            var user = (from user in users where user.Marks 
-                        )
-            
-            // var zip = users.Zip((user => user.Marks), (a, b) => (a + b);
-            //int summed = 0;
-            //for (int i = 0; i < users.Count; i++)
-            //{
-            //    summed += users.Marks;
-            //}
+             var Sum_1 = users.Where(user => user.Marks is not null
+             && user.Marks.Length > 0).Select(user => user.Marks.Sum()).Sum();
 
-            //Console.WriteLine(summed);
-          //var zipped = users.Zip(from user in users select user.Marks).ToArray();
+             var Sum_2 = (from user in users where user.Marks is not null
+                          && user.Marks.Length > 0 select user.Marks.Sum()).Sum();
 
-            // Console.WriteLine(zipped);
-            //foreach (var value in zip)
-            //{
-            //    Console.WriteLine(value);
-            //}
-               
-            //Array Summed = Array.Copy(user => user.Marks, users.Capacity, );
+            //Console.WriteLine(Sum_1);
+            //Console.WriteLine(Sum_2);
 
-            //Array Summed = Array.CreateInstance(typeof(System.Int32), 5);
-            //for (int i = Summed.GetLowerBound(0); i <= Summed.GetUpperBound(0); i++)
-            //    Summed.SetValue(i + 1, i);
+            var Count_1 = users.Where(user => user.Marks is not null
+            && user.Marks.Length > 0).Select(user => user.Marks.Count()).Sum();
 
-            //Console.WriteLine(Summed);
+            var Count_2 = (from user in users where user.Marks is not null
+                           && user.Marks.Length > 0 select user.Marks.Count()).Sum();
 
+            //Console.WriteLine(Count_1);
+            //Console.WriteLine(Count_2);
 
-            // Expression<Func<bool>> whereClauseDynamicSomeTable = t => true;
-            //// takie coś w sieci znalazłem może zadziała
+            var Avr_1 = users.Where(user => user.Marks is not null
+            && user.Marks.Length > 0).Select(user => user.Marks.Average()).Average();
+            var Avr_2 = (from user in users where user.Marks is not null
+                         && user.Marks.Length > 0 select user.Marks.Average()).Average();
 
-
-            // int[] summed = users.Sum(user => user.Marks);
-
-            // var sum = (users.CopyTo(user => user.Marks is not null);
-
-
-
-            //Console.WriteLine(suma_ocen);
-
-
-
-            // Console.WriteLine(Suma_ocen_2);
-
-            //TODO: Nie działa
+            //Console.WriteLine(Avr_1);
+            //Console.WriteLine(Avr_2);
 
             /////////////////////////////////////////////////////////////////////////////
             ///
 
             // 8. Najlepsza ocena
 
+            var BestMark_1 = users.Where(user => user.Marks is not null
+            && user.Marks.Length > 0).OrderByDescending(user => user.Marks.Max()).Select(user => user.Marks.Max());
 
-
-            // int Najlepsza_ocena_2 = from user in users select user.Marks.Max();
-
-            //TODO: Naprawić nie działa
-
-            //Console.WriteLine(Najlepsza_ocena_2);
+            var BestMark_2 = (from user in users where user.Marks is not null && user.Marks.Length > 0 select user.Marks.Max()).Max();
+            //Console.WriteLine(BestMark_1);
+            //Console.WriteLine(BestMark_2);
 
             // 9. Najgorsza ocena 
 
