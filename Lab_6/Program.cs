@@ -1,33 +1,29 @@
 ﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
 
 namespace Lab_6
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             List<User> users = new List<User>()
             {
                 new User {Name = "A", Role = "Teacher",Marks = null },
                 new User { Name = "B", Role = "Mod", Marks = null },
                 new User {Name = "C", Role = "Teacher", Marks = null},
-                new User {Name = "D", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5, 4, 3, 3} },
+                new User {Name = "D", Role = "Student", Marks = new [] {1, 2, 3, 4, 4, 5, 5, 4, 3, 3} },
                 new User {Name = "F", Role = "Admin", Marks = null},
-                new User {Name = "E", Role = "Student", Marks = new int[] {1, 2, 3, 4, 4, 5, 5, 3} },
-                new User {Name = "W", Role = "Student", Marks = new int[] {1, 5, 4, 3, 3} },
+                new User {Name = "E", Role = "Student", Marks = new [] {1, 2, 3, 4, 4, 5, 5, 3} },
+                new User {Name = "W", Role = "Student", Marks = new [] {1, 5, 4, 3, 3} },
                 new User {Name = "C", Role = "Mod", Marks = null},
-                new User {Name = "F", Role = "Student", Marks = new int[] {1, 2, 3, 4, 5, 5, 4, 3, 3} },
+                new User {Name = "F", Role = "Student", Marks = new [] {1, 2, 3, 4, 5, 5, 4, 3, 3} },
                 new User {Name = "G", Role = "Teacher", Marks = null},
-                new User {Name = "A", Role = "Student", Marks = new int[] {4, 4, 4, 5, 5, 4, 3, 4} },
-                new User {Name = "C", Role = "Student", Marks = new int[] {5, 5, 3, 5, 4, 5, 5, 4, 3, 2} },
-                new User {Name = "F", Role = "Student", Marks = new int[] {3, 2, 3, 4, 3, 5, 1, 4, 3} },
-                new User {Name = "P", Role = "Student", Marks = new int[] { } },
-                new User {Name = "O", Role = "Student", Marks = new int[] {4, 5, 5, 4, 5, 3} },
-                new User {Name = "Z", Role = "Student", Marks = new int[] {2, 2, 3, 5, 5, 3, 3} },
+                new User {Name = "A", Role = "Student", Marks = new [] {4, 4, 4, 5, 5, 4, 3, 4} },
+                new User {Name = "C", Role = "Student", Marks = new [] {5, 5, 3, 5, 4, 5, 5, 4, 3, 2} },
+                new User {Name = "F", Role = "Student", Marks = new [] {3, 2, 3, 4, 3, 5, 1, 4, 3} },
+                new User {Name = "P", Role = "Student", Marks = new [] {1 }, },
+                new User {Name = "O", Role = "Student", Marks = new [] {4, 5, 5, 4, 5, 3} },
+                new User {Name = "Z", Role = "Student", Marks = new [] {2, 2, 3, 5, 5, 3, 3} },
 
 
             };
@@ -36,13 +32,15 @@ namespace Lab_6
             ///
 
             // 1. Ilość rekordów w tablicy
-            //Console.WriteLine(users.Count);
-            //Console.WriteLine((from user in users select user).Count());
+
+            Console.WriteLine(users.Count);
+            Console.WriteLine((from user in users select user).Count());
 
             /////////////////////////////////////////////////////////////////////
             ///
 
             // 2. Lista nazw użytkowników
+
             List<string> names_1 = users.Select(user => user.Name).ToList();
             List<string> names_2 = (from user in users select user.Name).ToList();
 
@@ -111,9 +109,9 @@ namespace Lab_6
 
             // 6. Ilość rekordów, dla których podano oceny ( nie null i więcej niż 0 )
 
-            var oceny_1 = (users.Count(user => user.Marks is not null));
+            var oceny_1 = (users.Count(user => user.Marks is not null and user.Marks.Length > 0));
 
-            var oceny_2 = (from user in users where user.Marks is not null select user.Marks).Count();
+            var oceny_2 = (from user in users where user.Marks is not null and  select user.Marks.Length > 0).Count();
 
             // Console.WriteLine(oceny_1);
             //Console.WriteLine(oceny_2);
@@ -126,6 +124,9 @@ namespace Lab_6
 
             // 7. Suma, ilość i średnia wszystkich ocen studentów
 
+            var user = (from user in users where user.Marks 
+                        )
+            
             // var zip = users.Zip((user => user.Marks), (a, b) => (a + b);
             //int summed = 0;
             //for (int i = 0; i < users.Count; i++)
@@ -134,14 +135,14 @@ namespace Lab_6
             //}
 
             //Console.WriteLine(summed);
-          // var zipped = users.Zip(from user in users select user.Marks).ToArray();
+          //var zipped = users.Zip(from user in users select user.Marks).ToArray();
 
             // Console.WriteLine(zipped);
             //foreach (var value in zip)
             //{
             //    Console.WriteLine(value);
             //}
-
+               
             //Array Summed = Array.Copy(user => user.Marks, users.Capacity, );
 
             //Array Summed = Array.CreateInstance(typeof(System.Int32), 5);
