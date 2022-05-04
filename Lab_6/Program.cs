@@ -155,17 +155,33 @@ namespace Lab_6
             // 8. Najlepsza ocena
 
             var BestMark_1 = users.Where(user => user.Marks is not null
-            && user.Marks.Length > 0).OrderByDescending(user => user.Marks.Max()).Select(user => user.Marks.Max());
+            && user.Marks.Length > 0).Select(user => user.Marks.Max()).Max();
 
-            var BestMark_2 = (from user in users where user.Marks is not null && user.Marks.Length > 0 select user.Marks.Max()).Max();
+            var BestMark_2 = (from user in users where user.Marks is not null
+                              && user.Marks.Length > 0 select user.Marks.Max()).Max();
+
             //Console.WriteLine(BestMark_1);
             //Console.WriteLine(BestMark_2);
 
+            /////////////////////////////////////////////////////////////////////////////
+            ///
+
             // 9. Najgorsza ocena 
 
+            var WorstMark_1 = users.Where(user => user.Marks is not null
+           && user.Marks.Length > 0).Select(user => user.Marks.Min()).Min();
+
+            var WorstMark_2 = (from user in users
+                              where user.Marks is not null
+           && user.Marks.Length > 0
+                              select user.Marks.Min()).Min();
+
+            //Console.WriteLine(WorstMark_1);
+            //Console.WriteLine(WorstMark_2);
 
             // 10. Najlepszego studenta
 
+            var Best
             // 11.Lista studentów, którzy posiadają najmniej ocen
 
             // List<string> students_marks_1 = user => user.Marks
