@@ -13,7 +13,7 @@ namespace Lab_7
             {
                 // Uwaga: zmień `DESKTOP-123ABC\SQLEXPRESS` na nazwę swojego serwera.
 
-                string connectionString = @"Data Source=DESKTOP-123ABC\SQLEXPRESS;Initial Catalog=projectdb;Integrated Security=True";
+                string connectionString = @"Data Source=PK1-22;Initial Catalog=projectdb;Integrated Security=True";
 
                 using (DataContext dataContext = new DataContext(connectionString))
                 {
