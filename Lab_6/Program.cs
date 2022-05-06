@@ -45,7 +45,7 @@ namespace Lab_6
             ///////////////////////////////////////////////////////////////////////
             ///
 
-            1.Ilość rekordów w tablicy
+            //1.Ilość rekordów w tablicy
 
             Console.WriteLine("1. Ilość rekowrdów w tablicy");
 
@@ -369,6 +369,8 @@ namespace Lab_6
                     Console.WriteLine(user.Name);
                 }
             }
+
+            //TODO: Sortuje po roku nie po miesiącach
 
             ///////////////////////////////////////////////////////////////////
             ///
