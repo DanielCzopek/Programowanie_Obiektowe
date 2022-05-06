@@ -1,9 +1,12 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace Lab_6
+namespace Laby_6_domowe
 {
     class Program
     {
+
         public static void Main(string[] args)
         {
             List<User> users = new List<User>()
@@ -239,30 +242,30 @@ namespace Lab_6
 
             // 10. Najlepszego studenta
 
-            Console.WriteLine("10. Najlepszego studenta");
+            //Console.WriteLine("10. Najlepszego studenta");
 
-            var BestStudent_1 = users.OrderBy(user => user.Marks.Average()).Where(user => user.Marks is not null &&
-            user.Marks.Length > 0).Select(user => user.Name);
+            //var BestStudent_1 = users.OrderBy(user => user.Marks.Average()).Where(user => user.Marks is not null &&
+            //user.Marks.Length > 0).Select(user => user.Name);
 
-            //var Best_Avr_1 = users.Where(user => user.Marks is not null 
-            //&& user.Marks.Length > 0).Select(user => user.Marks.Average).Max();
+            ////var Best_Avr_1 = users.Where(user => user.Marks is not null 
+            ////&& user.Marks.Length > 0).Select(user => user.Marks.Average).Max();
 
-            var Best_Avr_2 = (from user in users
-                              where user.Marks is not null && user.Marks.Length > 0
-                              select user.Marks.Average()).Max();
-
-
-            var BestStudent_2 = (from user in users
-                                 where user.Marks is not null
-              && user.Marks.Length > 0 && user.Marks.Average().CompareTo(Best_Avr_2) == Best_Avr_2
-                                 select user.Name);
+            //var Best_Avr_2 = (from user in users
+            //                  where user.Marks is not null && user.Marks.Length > 0
+            //                  select user.Marks.Average()).Max();
 
 
-            Console.WriteLine(Best_Avr_2);
-            Console.WriteLine("--------------------------------");
-            Console.WriteLine(BestStudent_1);
-            Console.WriteLine("--------------------------------");
-            Console.WriteLine(BestStudent_2);
+            //var BestStudent_2 = (from user in users
+            //                     where user.Marks is not null
+            //  && user.Marks.Length > 0 && user.Marks.Average().CompareTo(Best_Avr_2) == Best_Avr_2
+            //                     select user.Name);
+
+
+            //Console.WriteLine(Best_Avr_2);
+            //Console.WriteLine("--------------------------------");
+            //Console.WriteLine(BestStudent_1);
+            //Console.WriteLine("--------------------------------");
+            //Console.WriteLine(BestStudent_2);
 
             // TODO: Nie działa
 
@@ -271,51 +274,51 @@ namespace Lab_6
 
             // 11.Lista studentów, którzy posiadają najmniej ocen
 
-            Console.WriteLine("11. Lista studentów, którzy posiadają najmniej ocen");
+            //Console.WriteLine("11. Lista studentów, którzy posiadają najmniej ocen");
 
-            var Worst_student_list_1 = users.Select(user => user).OrderBy(user => user.Marks.Length).Where(user => user.Marks is not null &&
-            user.Marks.Length > 0);
+            //var Worst_student_list_1 = users.Select(user => user).OrderBy(user => user.Marks.Length).Where(user => user.Marks is not null &&
+            //user.Marks.Length > 0);
 
-            var WorstStudentList_2 = (from user in users
-                                      where user.Marks is not null && user.Marks.Length > 0
-                                      orderby user.Marks.Length
-                                      select user).ToList();
+            //var WorstStudentList_2 = (from user in users
+            //                          where user.Marks is not null && user.Marks.Length > 0
+            //                          orderby user.Marks.Length
+            //                          select user).ToList();
 
-            foreach (var user in Worst_student_list_1.Take(1))
-            {
-                Console.WriteLine(user.Name);
-            }
-            Console.WriteLine("--------------------------------");
-            foreach (var user in WorstStudentList_2.Take(1))
-            {
-                Console.WriteLine(user.Name);
-            }
+            //foreach (var user in Worst_student_list_1.Take(1))
+            //{
+            //    Console.WriteLine(user.Name);
+            //}
+            //Console.WriteLine("--------------------------------");
+            //foreach (var user in WorstStudentList_2.Take(1))
+            //{
+            //    Console.WriteLine(user.Name);
+            //}
 
             ///////////////////////////////////////////////////////////////////
             ///
 
             // 12. Lista studentów, którzy posiadają najwięcej ocen
 
-            Console.WriteLine("12. Lista studentów, którzy posiadają najwięcej ocen");
+            //Console.WriteLine("12. Lista studentów, którzy posiadają najwięcej ocen");
 
-            var BestStudentList_1 = users.Select(user => user).OrderBy(user => user.Marks.Length).Where(user => user.Marks
-            is not null &&
-            user.Marks.Length > 0);
+            //var BestStudentList_1 = users.Select(user => user).OrderByDescending(user => user.Marks.Length).Where(user => user.Marks
+            //is not null &&
+            //user.Marks.Length > 0);
 
-            var BestStudentList_2 = (from user in users
-                                     where user.Marks is not null && user.Marks.Length > 0
-                                     orderby user.Marks.Length
-                                     select user).ToList();
+            //var BestStudentList_2 = (from user in users
+            //                         where user.Marks is not null && user.Marks.Length > 0
+            //                         orderby user.Marks.Length
+            //                         descending select user).ToList();
 
-            foreach (var user in BestStudentList_1.Take(1))
-            {
-                Console.WriteLine(user.Name);
-            }
-            Console.WriteLine("--------------------------------");
-            foreach (var user in BestStudentList_2.Take(1))
-            {
-                Console.WriteLine(user.Name);
-            }
+            //foreach (var user in BestStudentList_1.Take(1))
+            //{
+            //    Console.WriteLine(user.Name);
+            //}
+            //Console.WriteLine("--------------------------------");
+            //foreach (var user in BestStudentList_2.Take(1))
+            //{
+            //    Console.WriteLine(user.Name);
+            //}
 
             // 13. Lista obiektów zawierających tylko nazwę i średnią ocenę(mapowanie na inny obiekt)
 
@@ -379,11 +382,11 @@ namespace Lab_6
 
             Console.WriteLine("17. Listę użytkowników, którzy nie zostali usunięci" +
                 "(data usunięcia nie została ustawiona)");
-    
+
             var UsersNotRemoved_1 = users.Where(user => user.RemovedAt == null).Select(user => user).ToList();
             var UsersNotRemoved_2 = (from user in users
-                            where user.RemovedAt == null
-                            select user).ToList();
+                                     where user.RemovedAt == null
+                                     select user).ToList();
 
             foreach (var user in UsersNotRemoved_2)
                 Console.WriteLine(user.Name);
@@ -399,8 +402,8 @@ namespace Lab_6
             Console.WriteLine("18. Najnowszego studenta(najnowsza data utworzenia)");
 
             var NewestStudent_1 = (from user in users
-                                       orderby user.CreatedAt descending
-                                       select user).ToList();
+                                   orderby user.CreatedAt descending
+                                   select user).ToList();
             var NewestStudent_2 = users.OrderBy(user => user.CreatedAt).Select(user => user).ToList();
 
             foreach (var user in NewestStudent_1.Take(1))
@@ -426,7 +429,5 @@ namespace Lab_6
         public DateTime? CreatedAt { get; set; }
         public DateTime? RemovedAt { get; set; }
     }
+
 }
-
-
-
