@@ -32,20 +32,20 @@ namespace Lab_8
 										// powoduje to że cały odpalając program treści w konsoli wyświetlają się stopniowo a nie wszystkie na raz
 				}
 			});
-			
+
 			//Thread thread2 = new Thread(() =>
 			//{
 			//	for (int i = 1; i<= 5; i++)
-   //             {
-   //                 Console.WriteLine("Interation2: " + i);
+			//             {
+			//                 Console.WriteLine("Interation2: " + i);
 			//		Thread.Sleep(1000);
-   //             }
+			//             }
 			//});
-			
+
 			//thread2.Start();
-			
+
 			thread.Start();
-			
+
 
 			//Oba wątki wywołują się w tym samym czasie.
 
@@ -53,4 +53,3 @@ namespace Lab_8
 		}
 	}
 }
- 
