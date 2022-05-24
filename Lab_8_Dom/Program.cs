@@ -39,6 +39,7 @@ namespace Lab_8_Dom
             //bool looped2 = true;
 
             HashSet<int> primeNumbers = new HashSet<int>();
+
             bool looped = true;
 
 
@@ -52,19 +53,27 @@ namespace Lab_8_Dom
                     {
                         primeNumbers.Add(i);
                         Console.WriteLine("Iteration1: " + i);
-
+                        
                     }
                 }
                 Console.WriteLine("Stopping");
             });
 
+
+            // trzeba zmienić na 10000 by było 10sec
+           
+
             bool looped2 = true;
+
 
             Thread thread2 = new Thread(() =>
             {
                 Console.WriteLine("Started");
 
-                for (int i = 1; looped2; ++i)
+                // Pomysł jest taki żeby zrobić przedziały w którym dany wątek będzie obliczał
+                // - trzeba jakoś wiedzieć która to ostatnia liczba a to różnie oblicza
+                // - działa najpierw 1 potem 2 a nie 2 na raz
+                for (int i = 64927; looped2; ++i)
                 {
                     if (czyPierwsza(i) == true)
                     {
@@ -75,18 +84,18 @@ namespace Lab_8_Dom
                 }
                 Console.WriteLine("Stopping");
             });
-
             thread1.Start();
-          Thread.Sleep(1000);
-            thread2.Start();
-          Thread.Sleep(1000);
+            Thread.Sleep(5000);
             looped = false;
             thread1.Join();
+
+            thread2.Start();
+            Thread.Sleep(5000);
             looped2 = false;
             thread2.Join();
-        }
-        
 
+
+        }
 
         static bool czyPierwsza(int j)
         {
