@@ -36,81 +36,94 @@ namespace Lab_8_Dom
             //looped = false;
             //thread1.Join();
 
-            //bool looped2 = true;
+            //static bool czyPierwsza(int j)
+            //{
+            //    for (int i = 2; i <= Math.Sqrt(j); i++)
+            //    {
+            //        if (j % i == 0)
+            //        {
+            //            return false;
+            //        }
+            //    }
+            //    return true;
+            //}
+
+            ///////////////////////////////////////////////////
+            ///
 
             HashSet<int> primeNumbers = new HashSet<int>();
-
+            bool loop = true;
             bool looped = true;
+            
 
 
-            Thread thread1 = new Thread(() =>
+            for (int j = 1; loop; j++)
             {
-                Console.WriteLine("Started");
-
-                for (int i = 1; looped; ++i)
+                Thread thread1 = new Thread(() =>
                 {
-                    if (czyPierwsza(i) == true)
+                    Console.WriteLine("Started");
+
+                    for (int i = 0; looped; i++)
                     {
-                        primeNumbers.Add(i);
-                        Console.WriteLine("Iteration1: " + i);
-                        
+                        if (czyPierwsza(i) == true)
+                        {
+                            primeNumbers.Add(i);
+                            Console.WriteLine("Iteration1: " + i);
+
+                        }
                     }
-                }
-                Console.WriteLine("Stopping");
-            });
 
+                    Console.WriteLine("Stopping");
+ 
+                });
+                thread1.Start();
+                //Thread.Sleep(10000);
+                //looped = false;
+                ////////////////////////////
+                ///
 
-            // trzeba zmienić na 10000 by było 10sec
-           
-
-            bool looped2 = true;
-
-
-            Thread thread2 = new Thread(() =>
-            {
-                Console.WriteLine("Started");
-
-                // Pomysł jest taki żeby zrobić przedziały w którym dany wątek będzie obliczał
-                // - trzeba jakoś wiedzieć która to ostatnia liczba a to różnie oblicza
-                // - działa najpierw 1 potem 2 a nie 2 na raz
-                for (int i = 64927; looped2; ++i)
+                Thread thread2 = new Thread(() =>
                 {
-                    if (czyPierwsza(i) == true)
+                    Console.WriteLine("Started");
+
+                    for (int i = 0; looped; i++)
                     {
-                        primeNumbers.Add(i);
-                        Console.WriteLine("Iteration2: " + i);
+                        if (czyPierwsza(i) == true)
+                        {
+                            primeNumbers.Add(i);
+                            Console.WriteLine("Iteration2: " + i);
 
+                        }
                     }
-                }
-                Console.WriteLine("Stopping");
-            });
-            thread1.Start();
-            Thread.Sleep(5000);
-            looped = false;
-            thread1.Join();
 
-            thread2.Start();
-            Thread.Sleep(5000);
-            looped2 = false;
-            thread2.Join();
+                    Console.WriteLine("Stopping");
 
+                });
+                
+                thread2.Start();
+                Thread.Sleep(10000);
+                looped = false;
+                
 
-        }
-
-        static bool czyPierwsza(int j)
-        {
-            for (int i = 2; i <= Math.Sqrt(j); i++)
-            {
-                if (j % i == 0)
-                {
-                    return false;
-                }
             }
-            return true;
-        }
+            loop = false;
 
+
+            static bool czyPierwsza(int j)
+            {
+                for (int i = 2; i <= Math.Sqrt(j); i++)
+                {
+                    if (j % i == 0)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
     }
 }
+
 
 
 
