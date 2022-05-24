@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Threading;
 namespace Lab_8_Dom
 {
-
-
     public class Program
     {
 
         public static void Main(string[] args)
-        {            
+        {
             HashSet<int> primeNumbers = new HashSet<int>();
             bool looped = true;
             Thread thread1 = new Thread(() =>
@@ -28,24 +26,25 @@ namespace Lab_8_Dom
 
                 Console.WriteLine("Stopping");
             });
-           
+
             thread1.Start();
             Thread.Sleep(10000);
-           looped = false;
+            looped = false;
             thread1.Join();
 
-        static bool czyPierwsza(int j)
-        {
-            for (int i = 2; i <= Math.Sqrt(j); i++)
+            static bool czyPierwsza(int j)
             {
-                if (j % i == 0)
+                for (int i = 2; i <= Math.Sqrt(j); i++)
                 {
-                    return false;
+                    if (j % i == 0)
+                    {
+                        return false;
+                    }
                 }
+                return true;
             }
-            return true;
-        }
 
+        }
     }
 }
 
