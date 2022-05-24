@@ -31,8 +31,8 @@ namespace Lab_8
 
             //  usypia główny wątek do momętu aż utworzony wątek nie zostanie usunięty
 
-
             //Oba wątki wywołują się w tym samym czasie.
+
         }
     }
 }
