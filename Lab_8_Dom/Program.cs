@@ -78,11 +78,10 @@ namespace Lab_8_Dom
 
             thread1.Start();
           Thread.Sleep(1000);
+            thread2.Start();
+          Thread.Sleep(1000);
             looped = false;
             thread1.Join();
-        
-            thread2.Start();
-            Thread.Sleep(1000);
             looped2 = false;
             thread2.Join();
         }
