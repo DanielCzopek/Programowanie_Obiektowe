@@ -180,8 +180,7 @@ namespace Lab_8_Dom
                     Console.WriteLine("Stopping");
 
                 });
-                
-               
+
                 ////////////////////////////
                 ///
 
@@ -207,17 +206,14 @@ namespace Lab_8_Dom
                 thread2.Start();
 
                 Thread.Sleep(1000);
-            looped = false;
 
-            thread1.Join();
+                looped = false;
+
+                thread1.Join();
+
                 thread2.Join();
-               
-                
 
-            
-
-            //looped = false;
-
+            Console.WriteLine(primeNumbers.Count);
 
             static bool czyPierwsza(int j)
             {
