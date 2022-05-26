@@ -182,7 +182,7 @@ namespace Lab_8_Dom
                 });
 
                 ////////////////////////////
-                ///
+                /// 
 
                 Thread thread2 = new Thread(() =>
                 {
