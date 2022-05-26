@@ -8,7 +8,7 @@ namespace Lab_8_Dom
 
         public static void Main(string[] args)
         {
-            //W taki sposób działa na jednym wątku ideolo
+            // W taki sposób działa na jednym wątku ideolo
 
             //HashSet<int> primeNumbers = new HashSet<int>();
             //bool looped = true;
@@ -36,17 +36,7 @@ namespace Lab_8_Dom
             //looped = false;
             //thread1.Join();
 
-            //static bool czyPierwsza(int j)
-            //{
-            //    for (int i = 2; i <= Math.Sqrt(j); i++)
-            //    {
-            //        if (j % i == 0)
-            //        {
-            //            return false;
-            //        }
-            //    }
-            //    return true;
-            //}
+
 
             ///////////////////////////////////////////////////
             ///
@@ -157,65 +147,70 @@ namespace Lab_8_Dom
             //    Thread.Sleep(10000);
             //    looped = false;
             //}
+            ///////////////////////////////////////////
+
+            // próba 4. 
 
             HashSet<int> primeNumbers = new HashSet<int>();
 
             bool looped = true;
 
-           
-                Thread thread1 = new Thread(() =>
+
+            Thread thread1 = new Thread(() =>
+            {
+                Console.WriteLine("Started");
+
+                for (int i = 0; looped; i++)
                 {
-                    Console.WriteLine("Started");
-
-                    for (int i = 0; looped; i++)
+                    if (czyPierwsza(i) == true)
                     {
-                        if (czyPierwsza(i) == true)
-                        {
-                            primeNumbers.Add(i);
-                            Console.WriteLine("Iteration1: " + i);
+                        primeNumbers.Add(i);
+                        Console.WriteLine("Iteration1: " + i);
 
-                        }
                     }
+                }
 
-                    Console.WriteLine("Stopping");
+                Console.WriteLine("Stopping");
 
-                });
+            });
 
-                ////////////////////////////
-                /// 
+            ////////////////////////////
+            /// 
 
-                Thread thread2 = new Thread(() =>
+            Thread thread2 = new Thread(() =>
+            {
+                Console.WriteLine("Started");
+
+                for (int i = 0; looped; i++)
                 {
-                    Console.WriteLine("Started");
-
-                    for (int i = 0; looped; i++)
+                    if (czyPierwsza(i) == true)
                     {
-                        if (czyPierwsza(i) == true)
-                        {
-                            primeNumbers.Add(i);
-                            Console.WriteLine("Iteration2: " + i);
+                        primeNumbers.Add(i);
+                        Console.WriteLine("Iteration2: " + i);
 
-                        }
                     }
+                }
 
-                    Console.WriteLine("Stopping");
+                Console.WriteLine("Stopping");
 
-                });
-                thread1.Start();
-                
-                thread2.Start();
+            });
+            thread1.Start();
 
-                Thread.Sleep(10000);
+            thread2.Start();
 
-                looped = false;
+            Thread.Sleep(10000);
 
-                thread1.Join();
+            looped = false;
 
-                thread2.Join();
+            thread1.Join();
 
-            Console.WriteLine(primeNumbers.Count);
+            thread2.Join();
 
-            static bool czyPierwsza(int j)  
+            Console.WriteLine("Znaleziono " + primeNumbers.Count + " liczb pierwszych");
+
+
+
+            static bool czyPierwsza(int j)
             {
                 if (j < 2)
                 {
@@ -238,6 +233,7 @@ namespace Lab_8_Dom
                 }
                 return true;
             };
+
 
         }
     }
