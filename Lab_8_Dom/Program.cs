@@ -205,7 +205,7 @@ namespace Lab_8_Dom
                 
                 thread2.Start();
 
-                Thread.Sleep(1000);
+                Thread.Sleep(10000);
 
                 looped = false;
 
@@ -215,9 +215,21 @@ namespace Lab_8_Dom
 
             Console.WriteLine(primeNumbers.Count);
 
-            static bool czyPierwsza(int j)
+            static bool czyPierwsza(int j)  
             {
-                for (int i = 2; i <= Math.Sqrt(j); i++)
+                if (j < 2)
+                {
+                    return false;
+                }
+                if (j == 2)
+                {
+                    return true;
+                }
+                if (j % 2 == 0)
+                {
+                    return false;
+                }
+                for (int i = 3; i < j; i += 2)
                 {
                     if (j % i == 0)
                     {
@@ -225,7 +237,8 @@ namespace Lab_8_Dom
                     }
                 }
                 return true;
-            }
+            };
+
         }
     }
 }
