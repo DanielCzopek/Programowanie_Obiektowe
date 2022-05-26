@@ -64,12 +64,12 @@ namespace Lab_8_Dom
             //        Console.WriteLine("Started");
 
 
-            //            if (czyPierwsza(i) == true)
-            //            {
-            //                primeNumbers.Add(i);
-            //                Console.WriteLine("Iteration1: " + i);
+            //        if (czyPierwsza(i) == true)
+            //        {
+            //            primeNumbers.Add(i);
+            //            Console.WriteLine("Iteration1: " + i);
 
-            //            }
+            //        }
 
 
             //        Console.WriteLine("Stopping");
@@ -87,12 +87,12 @@ namespace Lab_8_Dom
             //        Console.WriteLine("Started");
 
 
-            //            if (czyPierwsza(i) == true)
-            //            {
-            //                primeNumbers.Add(i);
-            //                Console.WriteLine("Iteration2: " + i);
+            //        if (czyPierwsza(i) == true)
+            //        {
+            //            primeNumbers.Add(i);
+            //            Console.WriteLine("Iteration2: " + i);
 
-            //            }
+            //        }
 
 
             //        Console.WriteLine("Stopping");
@@ -100,7 +100,7 @@ namespace Lab_8_Dom
             //    });
 
             //    thread2.Start();
-            //   // Thread.Sleep(10000);
+            //    // Thread.Sleep(10000);
             //    looped = false;
 
 
@@ -112,53 +112,111 @@ namespace Lab_8_Dom
             ///////////////////////////////////////////////
             // próba nr 3
 
+            //    HashSet<int> primeNumbers = new HashSet<int>();
+
+            //    bool looped = true;
+
+            //    Thread thread1 = new Thread(() =>
+            //    {
+            //        Console.WriteLine("Started");
+
+            //        for (int i = 0; looped; i++)
+            //        {
+            //            if (czyPierwsza(i) == true)
+            //            {
+            //                primeNumbers.Add(i);
+            //                Console.WriteLine("Iteration: " + i);
+
+            //            }
+            //            Thread thread2 = new Thread(() =>
+            //            {
+            //                Console.WriteLine("Started");
+
+            //                for ( ; looped; i++)
+            //                {
+            //                    if (czyPierwsza(i) == true)
+            //                    {
+            //                        primeNumbers.Add(i);
+            //                        Console.WriteLine("Iteration2: " + i);
+
+            //                    }
+            //                }
+            //                Console.WriteLine("Stopping");
+
+            //            });
+
+            //            thread2.Start();
+            //            Thread.Sleep(10000);
+            //            looped = false;
+            //        }
+            //        Console.WriteLine("Stopping");
+
+            //    });
+
+            //    thread1.Start();
+            //    Thread.Sleep(10000);
+            //    looped = false;
+            //}
+
             HashSet<int> primeNumbers = new HashSet<int>();
 
             bool looped = true;
 
-            Thread thread1 = new Thread(() =>
-            {
-                Console.WriteLine("Started");
-
-                for (int i = 0; looped; i++)
+           
+                Thread thread1 = new Thread(() =>
                 {
-                    if (czyPierwsza(i) == true)
-                    {
-                        primeNumbers.Add(i);
-                        Console.WriteLine("Iteration: " + i);
+                    Console.WriteLine("Started");
 
-                    }
-                    Thread thread2 = new Thread(() =>
+                    for (int i = 0; looped; i++)
                     {
-                        Console.WriteLine("Started");
-
-                        for ( ; looped; i++)
+                        if (czyPierwsza(i) == true)
                         {
-                            if (czyPierwsza(i) == true)
-                            {
-                                primeNumbers.Add(i);
-                                Console.WriteLine("Iteration2: " + i);
+                            primeNumbers.Add(i);
+                            Console.WriteLine("Iteration1: " + i);
 
-                            }
                         }
-                        Console.WriteLine("Stopping");
+                    }
 
-                    });
+                    Console.WriteLine("Stopping");
 
-                    thread2.Start();
-                    Thread.Sleep(10000);
-                    looped = false;
-                }
-                Console.WriteLine("Stopping");
+                });
+                
+               
+                ////////////////////////////
+                ///
 
-            });
+                Thread thread2 = new Thread(() =>
+                {
+                    Console.WriteLine("Started");
 
-            thread1.Start();
-            Thread.Sleep(10000);
+                    for (int i = 0; looped; i++)
+                    {
+                        if (czyPierwsza(i) == true)
+                        {
+                            primeNumbers.Add(i);
+                            Console.WriteLine("Iteration2: " + i);
+
+                        }
+                    }
+
+                    Console.WriteLine("Stopping");
+
+                });
+                thread1.Start();
+                
+                thread2.Start();
+
+                Thread.Sleep(1000);
             looped = false;
 
-           
-        }
+            thread1.Join();
+                thread2.Join();
+               
+                
+
+            
+
+            //looped = false;
 
 
             static bool czyPierwsza(int j)
@@ -172,7 +230,7 @@ namespace Lab_8_Dom
                 }
                 return true;
             }
-        
+        }
     }
 }
 
