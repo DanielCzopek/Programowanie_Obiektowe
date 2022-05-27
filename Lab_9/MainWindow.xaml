@@ -7,8 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Text" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="25" Margin="68,10,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button x:Name="Text" Content="Text" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click"/>
+        <Button x:Name="Bash" Content="Bash" HorizontalAlignment="Left" Height="25" Margin="68,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click_1"/>
+        <Button x:Name="c__" Content="c++" HorizontalAlignment="Left" Height="25" Margin="132,10,0,0" VerticalAlignment="Top" Width="35" Click="c___Click"/>
+        <Button x:Name="c_sharp" Content="c#" HorizontalAlignment="Left" Height="25" Margin="189,10,0,0" VerticalAlignment="Top" Width="35" Click="c_sharp_Click"/>
+        <Button x:Name="java" Content="Java" HorizontalAlignment="Left" Height="25" Margin="253,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click_2"/>
+        <Button x:Name="CSS" Content="CSS" HorizontalAlignment="Left" Height="25" Margin="309,10,0,0" VerticalAlignment="Top" Width="35" Click="CSS_Click"/>
+        <Button x:Name="HTML" Content="HTML" HorizontalAlignment="Left" Height="25" Margin="369,10,0,0" VerticalAlignment="Top" Width="35" Click="HTML_Click"/>
+        <Button x:Name="JavaScript" Content="JavaScript" HorizontalAlignment="Left" Height="25" Margin="427,0,0,399" VerticalAlignment="Bottom" Width="35" Click="JavaScript_Click"/>
 
     </Grid>
 </Window>
