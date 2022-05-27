@@ -160,12 +160,12 @@ namespace Lab_8_Dom
             {
                 Console.WriteLine("Started");
 
-                for (int i = 0; looped; i++)
+                for (int i = 0; looped; i += 2)
                 {
                     if (czyPierwsza(i) == true)
                     {
                         primeNumbers.Add(i);
-                        Console.WriteLine("Iteration1: " + i);
+                        //Console.WriteLine("Iteration1: " + i);
 
                     }
                 }
@@ -181,12 +181,12 @@ namespace Lab_8_Dom
             {
                 Console.WriteLine("Started");
 
-                for (int i = 0; looped; i++)
+                for (int i = 1; looped; i += 2)
                 {
                     if (czyPierwsza(i) == true)
                     {
                         primeNumbers.Add(i);
-                        Console.WriteLine("Iteration2: " + i);
+                        //Console.WriteLine("Iteration2: " + i);
 
                     }
                 }

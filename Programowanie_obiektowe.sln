@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_7_Uzupełnienie", "Lab_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_7b", "Lab_7b\Lab_7b.csproj", "{771D3FA9-242F-450F-89E2-F39CBE708B2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_8", "Lab_8\Lab_8.csproj", "{450007CF-1EFC-4A0D-8CED-1FBDC2942BC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_8", "Lab_8\Lab_8.csproj", "{450007CF-1EFC-4A0D-8CED-1FBDC2942BC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_8_Dom", "Lab_8_Dom\Lab_8_Dom.csproj", "{E6DE7B3C-6D9F-47D5-8B2E-6E1BA5C0EB1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_8_Dom", "Lab_8_Dom\Lab_8_Dom.csproj", "{E6DE7B3C-6D9F-47D5-8B2E-6E1BA5C0EB1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
