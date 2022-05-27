@@ -8,13 +8,16 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="Text" Content="Text" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click"/>
-        <Button x:Name="Bash" Content="Bash" HorizontalAlignment="Left" Height="25" Margin="68,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click_1"/>
-        <Button x:Name="c__" Content="c++" HorizontalAlignment="Left" Height="25" Margin="132,10,0,0" VerticalAlignment="Top" Width="35" Click="c___Click"/>
-        <Button x:Name="c_sharp" Content="c#" HorizontalAlignment="Left" Height="25" Margin="189,10,0,0" VerticalAlignment="Top" Width="35" Click="c_sharp_Click"/>
-        <Button x:Name="java" Content="Java" HorizontalAlignment="Left" Height="25" Margin="253,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click_2"/>
-        <Button x:Name="CSS" Content="CSS" HorizontalAlignment="Left" Height="25" Margin="309,10,0,0" VerticalAlignment="Top" Width="35" Click="CSS_Click"/>
-        <Button x:Name="HTML" Content="HTML" HorizontalAlignment="Left" Height="25" Margin="369,10,0,0" VerticalAlignment="Top" Width="35" Click="HTML_Click"/>
-        <Button x:Name="JavaScript" Content="JavaScript" HorizontalAlignment="Left" Height="25" Margin="427,0,0,399" VerticalAlignment="Bottom" Width="35" Click="JavaScript_Click"/>
+        <Button x:Name="Bash" Content="Bash" HorizontalAlignment="Left" Height="25" Margin="50,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click_1"/>
+        <Button x:Name="c__" Content="c++" HorizontalAlignment="Left" Height="25" Margin="90,10,0,0" VerticalAlignment="Top" Width="35" Click="c___Click"/>
+        <Button x:Name="c_sharp" Content="c#" HorizontalAlignment="Left" Height="25" Margin="130,10,0,0" VerticalAlignment="Top" Width="32" Click="c_sharp_Click"/>
+        <Button x:Name="java" Content="Java" HorizontalAlignment="Left" Height="25" Margin="167,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click_2"/>
+        <Button x:Name="CSS" Content="CSS" HorizontalAlignment="Left" Height="25" Margin="207,10,0,0" VerticalAlignment="Top" Width="35" Click="CSS_Click"/>
+        <Button x:Name="HTML" Content="HTML" HorizontalAlignment="Left" Height="25" Margin="247,10,0,0" VerticalAlignment="Top" Width="40" Click="HTML_Click"/>
+        <Button x:Name="JavaScript" Content="JavaScript" HorizontalAlignment="Left" Height="25" Margin="292,0,0,399" VerticalAlignment="Bottom" Width="58" Click="JavaScript_Click"/>
+        <Button x:Name="PHP" Content="PHP" HorizontalAlignment="Left" Height="25" Margin="355,10,0,0" VerticalAlignment="Top" Width="35" Click="PHP_Click"/>
+        <Button x:Name="Python" Content="Python" HorizontalAlignment="Left" Height="25" Margin="395,10,0,0" VerticalAlignment="Top" Width="45" Click="Python_Click"/>
+        <Button x:Name="SQL" Content="SQL" HorizontalAlignment="Left" Height="25" Margin="445,10,0,0" VerticalAlignment="Top" Width="35" Click="SQL_Click"/>
 
     </Grid>
 </Window>
